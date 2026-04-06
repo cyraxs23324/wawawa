@@ -1567,17 +1567,17 @@ jobs:
           sleep 3000
 
   pinggy-8:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 100000
     steps:
       - uses: actions/checkout@v4
       - name: FULL SETUP
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -1604,11 +1604,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 2
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -1635,11 +1635,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 3
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -1666,11 +1666,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 4
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -1697,11 +1697,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 5
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -1728,11 +1728,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 6
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -1759,11 +1759,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 7
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -1790,17 +1790,17 @@ jobs:
           sleep 3000
 
   pinggy-9:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 100000
     steps:
       - uses: actions/checkout@v4
       - name: FULL SETUP
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -1827,11 +1827,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 2
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -1858,11 +1858,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 3
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -1889,11 +1889,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 4
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -1920,11 +1920,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 5
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -1951,11 +1951,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 6
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -1982,11 +1982,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 7
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2013,17 +2013,17 @@ jobs:
           sleep 3000
 
   pinggy-10:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 100000
     steps:
       - uses: actions/checkout@v4
       - name: FULL SETUP
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2050,11 +2050,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 2
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2081,11 +2081,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 3
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2112,11 +2112,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 4
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2143,11 +2143,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 5
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2174,11 +2174,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 6
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2205,11 +2205,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 7
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2236,17 +2236,17 @@ jobs:
           sleep 3000
 
   pinggy-11:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 100000
     steps:
       - uses: actions/checkout@v4
       - name: FULL SETUP
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2273,11 +2273,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 2
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2304,11 +2304,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 3
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2335,11 +2335,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 4
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2366,11 +2366,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 5
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2397,11 +2397,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 6
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2428,11 +2428,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 7
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2459,17 +2459,17 @@ jobs:
           sleep 3000
 
   pinggy-12:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 100000
     steps:
       - uses: actions/checkout@v4
       - name: FULL SETUP
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2496,11 +2496,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 2
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2527,11 +2527,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 3
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2558,11 +2558,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 4
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2589,11 +2589,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 5
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2620,11 +2620,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 6
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2651,11 +2651,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 7
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2682,17 +2682,17 @@ jobs:
           sleep 3000
 
   pinggy-13:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 100000
     steps:
       - uses: actions/checkout@v4
       - name: FULL SETUP
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2719,11 +2719,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 2
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2750,11 +2750,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 3
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2781,11 +2781,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 4
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2812,11 +2812,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 5
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2843,11 +2843,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 6
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2874,11 +2874,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 7
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2905,17 +2905,17 @@ jobs:
           sleep 3000
 
   pinggy-14:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 100000
     steps:
       - uses: actions/checkout@v4
       - name: FULL SETUP
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2942,11 +2942,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 2
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -2973,11 +2973,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 3
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3004,11 +3004,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 4
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3035,11 +3035,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 5
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3066,11 +3066,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 6
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3097,11 +3097,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 7
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3128,17 +3128,17 @@ jobs:
           sleep 3000
 
   pinggy-15:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 100000
     steps:
       - uses: actions/checkout@v4
       - name: FULL SETUP
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3165,11 +3165,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 2
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3196,11 +3196,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 3
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3227,11 +3227,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 4
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3258,11 +3258,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 5
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3289,11 +3289,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 6
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3320,11 +3320,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 7
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3351,17 +3351,17 @@ jobs:
           sleep 3000
 
   pinggy-16:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 100000
     steps:
       - uses: actions/checkout@v4
       - name: FULL SETUP
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3388,11 +3388,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 2
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3419,11 +3419,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 3
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3450,11 +3450,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 4
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3481,11 +3481,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 5
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3512,11 +3512,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 6
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3543,11 +3543,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 7
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3574,17 +3574,17 @@ jobs:
           sleep 3000
 
   pinggy-17:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 100000
     steps:
       - uses: actions/checkout@v4
       - name: FULL SETUP
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3611,11 +3611,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 2
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3642,11 +3642,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 3
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3673,11 +3673,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 4
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3704,11 +3704,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 5
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3735,11 +3735,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 6
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3766,11 +3766,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 7
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3797,17 +3797,17 @@ jobs:
           sleep 3000
 
   pinggy-18:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 100000
     steps:
       - uses: actions/checkout@v4
       - name: FULL SETUP
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3834,11 +3834,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 2
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3865,11 +3865,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 3
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3896,11 +3896,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 4
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3927,11 +3927,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 5
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3958,11 +3958,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 6
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -3989,11 +3989,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 7
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -4020,17 +4020,17 @@ jobs:
           sleep 3000
 
   pinggy-19:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 100000
     steps:
       - uses: actions/checkout@v4
       - name: FULL SETUP
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -4057,11 +4057,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 2
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -4088,11 +4088,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 3
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -4119,11 +4119,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 4
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -4150,11 +4150,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 5
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -4181,11 +4181,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 6
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -4212,11 +4212,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 7
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -4243,17 +4243,17 @@ jobs:
           sleep 3000
 
   pinggy-20:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 100000
     steps:
       - uses: actions/checkout@v4
       - name: FULL SETUP
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -4272,11 +4272,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 2
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -4295,11 +4295,11 @@ jobs:
           sleep 3000
       - name: FULL SETUP 3
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
-          sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-          sudo launchctl kickstart -k system/com.openssh.sshd || true
-          brew install wget || true
+          echo 'runner:Venom123!' | sudo chpasswd
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo apt update -y
+          sudo apt install -y curl wget python3 python3-pip
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -4318,8 +4318,9 @@ jobs:
           sleep 3000
       - name: FULL SETUP 4
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo dscl . -passwd /Users/runner Venom123!
           sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
           sudo launchctl kickstart -k system/com.openssh.sshd || true
           brew install wget || true
@@ -4341,8 +4342,9 @@ jobs:
           sleep 3000
       - name: FULL SETUP 5
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo dscl . -passwd /Users/runner Venom123!
           sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
           sudo launchctl kickstart -k system/com.openssh.sshd || true
           brew install wget || true
@@ -4364,8 +4366,9 @@ jobs:
           sleep 3000
       - name: FULL SETUP 6
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo dscl . -passwd /Users/runner Venom123!
           sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
           sudo launchctl kickstart -k system/com.openssh.sshd || true
           brew install wget || true
@@ -4387,8 +4390,9 @@ jobs:
           sleep 3000
       - name: FULL SETUP 7
         run: |
-          sudo systemsetup -setremotelogin on
-          sudo sysadminctl -resetPasswordFor runner -newPassword Venom123!
+          sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+          sudo systemctl restart ssh
+          sudo dscl . -passwd /Users/runner Venom123!
           sudo sed -i '' 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
           sudo launchctl kickstart -k system/com.openssh.sshd || true
           brew install wget || true
